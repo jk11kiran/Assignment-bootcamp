@@ -1,0 +1,86 @@
+INHERITANCE
+
+
+HEIRARCHY
+
+class atm{
+    void banking(){
+        System.out.println("Banking Service");
+    }
+}
+class checkbalance extends atm{
+    void amount(){
+        System.out.println("Available balance");
+    }
+}
+class withdraw extends atm{
+    void cash(){
+        System.out.println("Enter amount");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+    withdraw obj = new withdraw();
+    obj.banking();
+    obj.cash();
+    }
+}
+
+OUTPUT:
+Banking service
+Enter amount
+
+
+MULTILEVEL INHERITANCE
+
+class search{
+    void hotel(){
+        System.out.println("Book Hotel");
+    }
+}
+class select extends search{
+    void room(){
+        System.out.println("Choose room");
+    }
+}
+class online extends select{
+    void payment(){
+        System.out.println("PAY Rent");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        online obj = new online();
+        obj.hotel();
+        obj.payment();
+    }
+} 
+
+OUTPUT:
+Book Hotel
+PAY Rent
+
+
+SIMPLE INHERITANCE
+
+class transfer{
+    void bank(){
+        System.out.println("Send money");
+    }
+}
+class online extends transfer{
+    void payment(){
+        System.out.println("PAY");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        online obj = new online();
+        obj.bank();
+        obj.payment();
+    }
+} 
+
+OUTPUT:
+Send money
+PAY
